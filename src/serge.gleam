@@ -69,7 +69,7 @@ pub fn main() -> Nil {
       assert Ok(Nil) =
         process.try_call(
           serge_sender,
-          fn(reply_sender) { Write(100, "sto", reply_sender) },
+          fn(reply_sender) { Write(100, "a hundred", reply_sender) },
           100,
         )
       io.debug(ets_kv_get(ets_kv, 100))
